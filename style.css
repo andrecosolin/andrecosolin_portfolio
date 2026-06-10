@@ -5,10 +5,10 @@
 
 :root {
   /* Cores base */
-  --bg:          #05080f;
-  --bg-2:        #080d18;
-  --bg-card:     #0d1220;
-  --bg-elevated: #111827;
+  --bg:          #0c0f17;
+  --bg-2:        #10141f;
+  --bg-card:     #151a26;
+  --bg-elevated: #1a2030;
 
   /* Bordas */
   --border:      rgba(255,255,255,.07);
@@ -426,6 +426,21 @@ ul { list-style: none; }
 
 /* compat com elemento separador antigo */
 .stat-sep { display: none; }
+
+.stat-chart {
+  width: 64px;
+  height: 24px;
+  margin-top: 4px;
+}
+
+.stat-chart-bar--before {
+  fill: var(--text-3);
+  opacity: .35;
+}
+
+.stat-chart-bar--after {
+  fill: var(--blue-light);
+}
 
 /* ============================================================
    SOBRE
