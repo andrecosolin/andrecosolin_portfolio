@@ -621,6 +621,26 @@ ul { list-style: none; }
 .card:hover { background: var(--bg-elevated); }
 .card:hover::before { opacity: 1; }
 
+.card-featured {
+  background: linear-gradient(145deg, rgba(59,130,246,.12), var(--bg-card) 58%);
+  box-shadow: inset 0 0 0 1px rgba(96,165,250,.2);
+}
+.card-featured:hover {
+  background: linear-gradient(145deg, rgba(59,130,246,.18), var(--bg-elevated) 58%);
+}
+.card-kicker {
+  display: inline-flex;
+  margin: 0 0 12px;
+  padding: 4px 9px;
+  border: 1px solid rgba(96,165,250,.28);
+  border-radius: 99px;
+  color: var(--blue-light);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 /* Número grande de fundo */
 .card-num {
   position: absolute;
