@@ -28,6 +28,7 @@ const incidentContinue = document.getElementById('incidentContinue');
 const incidentTitle = document.getElementById('incidentTitle');
 const incidentMessage = document.getElementById('incidentMessage');
 const incidentReveal = document.getElementById('incidentReveal');
+const incidentActionHint = document.getElementById('incidentActionHint');
 
 if (incidentDemo) {
   let revealTimer;
@@ -36,6 +37,7 @@ if (incidentDemo) {
     incidentDemo.classList.add('incident-demo--revealed');
     const isEnglish = document.documentElement.lang === 'en';
     incidentContinue.hidden = true;
+    incidentActionHint.hidden = true;
     incidentContinue.textContent = isEnglish ? 'I understand. Go to portfolio' : 'Entendi. Ir para o portfólio';
     incidentReveal.classList.add('is-visible');
     revealTimer = window.setTimeout(() => {

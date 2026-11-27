@@ -39,17 +39,18 @@
   <div class="incident-demo" id="incidentDemo" role="dialog" aria-modal="true" aria-labelledby="incidentTitle" aria-describedby="incidentMessage" hidden>
     <div class="incident-card">
       <div class="login-brand"><span class="login-brand-mark">AC</span><span>André Cosolin</span></div>
+      <div class="incident-warning"><span class="incident-warning-icon">!</span><strong>NÃO FECHE ESTA PÁGINA</strong><span>A falha pode ser recuperada em um clique.</span></div>
       <div class="incident-crash-banner">
         <strong>404</strong>
-        <div><b>Site não encontrado</b><span>O endereço solicitado não existe neste momento. Tente novamente para ter certeza.</span></div>
+        <div><b>Falha ao carregar a vitrine</b><span>A página existe, mas não respondeu desta vez.</span></div>
       </div>
       <div class="login-window incident-host-error" aria-live="polite">
         <div class="login-window-top"><span></span><span></span><span></span></div>
         <div class="incident-error-strip"><span class="incident-error-mark">!</span><span>PAGE_NOT_FOUND · DEPLOY_ERROR</span></div>
         <div class="incident-icon" aria-hidden="true">!</div>
-        <p class="incident-kicker">Deploy público</p>
-        <h2 id="incidentTitle">Esta página não existe</h2>
-        <p id="incidentMessage" class="incident-message">Parece que você seguiu um link quebrado ou digitou um endereço que não existe.</p>
+        <p class="incident-kicker">Falha temporária</p>
+        <h2 id="incidentTitle">Algo deu errado ao abrir esta página</h2>
+        <p id="incidentMessage" class="incident-message">Não feche ainda. Clique em “Tentar novamente” para continuar.</p>
         <div class="host-error-details"><span>Request ID</span><strong>AC_01M8E7F4C91</strong><span>Path</span><strong>/portfolio/home</strong></div>
       </div>
 
@@ -59,6 +60,7 @@
         <span>Você acabou de sentir o que um usuário sente quando um produto falha sem explicar o que aconteceu. É justamente esse tipo de experiência que eu ajudo a evitar.</span>
       </div>
       <div class="incident-actions">
+        <p class="incident-action-hint" id="incidentActionHint">Ação recomendada: tentar novamente</p>
         <button class="btn btn-primary incident-continue" id="incidentContinue" type="button">Tentar novamente</button>
       </div>
     </div>

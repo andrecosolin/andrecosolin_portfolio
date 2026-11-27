@@ -33,17 +33,18 @@
   <div class="incident-demo" id="incidentDemo" role="dialog" aria-modal="true" aria-labelledby="incidentTitle" aria-describedby="incidentMessage" hidden>
     <div class="incident-card">
       <div class="login-brand"><span class="login-brand-mark">AC</span><span>André Cosolin</span></div>
+      <div class="incident-warning"><span class="incident-warning-icon">!</span><strong>DO NOT CLOSE THIS PAGE</strong><span>The failure can be recovered with one click.</span></div>
       <div class="incident-crash-banner">
         <strong>404</strong>
-        <div><b>Site not found</b><span>The requested address does not exist right now. Try again to make sure.</span></div>
+        <div><b>Could not load the portfolio</b><span>The page exists, but it did not respond this time.</span></div>
       </div>
       <div class="login-window incident-host-error" aria-live="polite">
         <div class="login-window-top"><span></span><span></span><span></span></div>
         <div class="incident-error-strip"><span class="incident-error-mark">!</span><span>PAGE_NOT_FOUND · DEPLOY_ERROR</span></div>
         <div class="incident-icon" aria-hidden="true">!</div>
-        <p class="incident-kicker">Public deployment</p>
-        <h2 id="incidentTitle">This page does not exist</h2>
-        <p id="incidentMessage" class="incident-message">It looks like you followed a broken link or entered an address that does not exist.</p>
+        <p class="incident-kicker">Temporary failure</p>
+        <h2 id="incidentTitle">Something went wrong while opening this page</h2>
+        <p id="incidentMessage" class="incident-message">Do not close this yet. Click “Try again” to continue.</p>
         <div class="host-error-details"><span>Request ID</span><strong>AC_01M8E7F4C91</strong><span>Path</span><strong>/portfolio/home</strong></div>
       </div>
       <div class="incident-reveal" id="incidentReveal" aria-live="polite">
@@ -52,6 +53,7 @@
         <span>You just felt what a user feels when a product fails without explaining what happened. That is exactly the kind of experience I help prevent.</span>
       </div>
       <div class="incident-actions">
+        <p class="incident-action-hint" id="incidentActionHint">Recommended action: try again</p>
         <button class="btn btn-primary incident-continue" id="incidentContinue" type="button">Try again</button>
       </div>
     </div>
