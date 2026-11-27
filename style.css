@@ -105,8 +105,11 @@
 .incident-message { max-width: 410px; margin: 13px auto 19px; color: #aeb8c8; font-size: .9rem; line-height: 1.55; }
 .incident-actions { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 22px; }
 .incident-continue { border: 0; cursor: pointer; }
-.incident-reveal { display: none; margin: 24px 0 0; padding: 16px 18px; border: 1px solid rgba(129,140,248,.34); border-radius: 9px; background: linear-gradient(135deg, rgba(49,46,129,.28), rgba(30,27,75,.2)); color: #ddd6fe; font-size: .83rem; line-height: 1.6; box-shadow: 0 10px 30px rgba(30,27,75,.2); }
+.incident-reveal { display: none; margin: 0 28px 28px; padding: 22px 24px; border: 1px solid #cbd5e1; border-radius: 4px; background: #f8fafc; color: #334155; font-size: .9rem; line-height: 1.6; box-shadow: none; }
 .incident-reveal.is-visible { display: block; animation: incident-in .3s ease both; }
+.incident-reveal strong { display: block; margin-bottom: 8px; color: #172033; font-size: 1.05rem; }
+.incident-reveal p { margin: 0 0 8px; color: #172033; font-size: 1rem; font-weight: 700; }
+.incident-reveal span { display: block; color: #526174; }
 body.incident-open { overflow: hidden; }
 .scroll-bug { position: fixed; z-index: 140; top: 18%; left: 5%; display: flex; align-items: center; gap: 8px; width: 106px; color: #38bdf8; opacity: 0; pointer-events: none; transform: translate(-50%, -50%) rotate(-8deg); transition: left .18s ease-out, top .18s ease-out, opacity .3s ease; filter: drop-shadow(0 8px 18px rgba(56,189,248,.16)); }
 .scroll-bug.is-visible { opacity: .46; }
@@ -1299,5 +1302,5 @@ body { background: var(--bg); color: var(--text); }
 /* Keep the simulated hosting error deliberately plain. */
 .incident-demo { background: #fff; }
 .incident-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 3px; color: #243047; box-shadow: 0 18px 45px rgba(15,23,42,.12); }
-.incident-continue { border-radius: 4px; background: #111827; color: #fff; box-shadow: none; }
+.incident-continue { min-height: 38px; padding: 9px 16px; border-radius: 4px; background: #111827; color: #fff; font-size: .76rem; box-shadow: none; }
 .incident-continue:hover { background: #374151; box-shadow: none; transform: none; }

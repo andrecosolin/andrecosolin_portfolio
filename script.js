@@ -30,17 +30,22 @@ const incidentMessage = document.getElementById('incidentMessage');
 const incidentReveal = document.getElementById('incidentReveal');
 
 if (incidentDemo) {
+  let revealTimer;
+
   const finishIncident = () => {
     incidentDemo.classList.add('incident-demo--revealed');
     const isEnglish = document.documentElement.lang === 'en';
-    incidentTitle.textContent = isEnglish ? 'You are in.' : 'Agora você entrou.';
-    incidentMessage.textContent = isEnglish ? 'The page recovered. No data was lost.' : 'A página se recuperou. Nenhum dado foi perdido.';
-    incidentContinue.textContent = isEnglish ? 'Go to portfolio' : 'Ir para o site';
+    incidentContinue.hidden = true;
+    incidentContinue.textContent = isEnglish ? 'I understand. Go to portfolio' : 'Entendi. Ir para o portfólio';
     incidentReveal.classList.add('is-visible');
-    incidentContinue.focus();
+    revealTimer = window.setTimeout(() => {
+      incidentContinue.hidden = false;
+      incidentContinue.focus();
+    }, 2800);
   };
 
   const closeIncident = () => {
+    clearTimeout(revealTimer);
     document.body.classList.remove('incident-open');
     incidentDemo.classList.add('is-closing');
     window.setTimeout(() => incidentDemo.remove(), 260);
