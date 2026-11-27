@@ -34,23 +34,20 @@
     <div class="incident-card">
       <div class="login-brand"><span class="login-brand-mark">AC</span><span>André Cosolin</span></div>
       <div class="incident-crash-banner">
-        <strong>500</strong>
-        <div><b>We could not load this page</b><span>The server encountered an unexpected error.</span></div>
+        <strong>404</strong>
+        <div><b>Site not found</b><span>The requested address does not exist right now. Try again to make sure.</span></div>
       </div>
-      <div class="login-window" aria-live="polite">
+      <div class="login-window incident-host-error" aria-live="polite">
         <div class="login-window-top"><span></span><span></span><span></span></div>
-        <div class="incident-error-strip"><span class="incident-error-mark">!</span><span>ERR_AUTH_401 · AUTHENTICATION FAILED</span></div>
+        <div class="incident-error-strip"><span class="incident-error-mark">!</span><span>PAGE_NOT_FOUND · DEPLOY_ERROR</span></div>
         <div class="incident-icon" aria-hidden="true">!</div>
-        <p class="incident-kicker">Restricted area</p>
-        <h2 id="incidentTitle">Could not sign you in</h2>
-        <p id="incidentMessage" class="incident-message">Your session expired and the login was not completed. Please try again.</p>
-        <div class="login-field"><span>Email</span><strong>fluxo_quebrado@éruim.com</strong></div>
-        <div class="login-field login-field--error"><span>Password</span><strong>••••••••</strong><small>Invalid credentials or expired session</small></div>
-        <button class="login-fake-button" type="button" tabindex="-1">Sign in</button>
-        <p class="login-help">Forgot password?</p>
+        <p class="incident-kicker">Public deployment</p>
+        <h2 id="incidentTitle">This page does not exist</h2>
+        <p id="incidentMessage" class="incident-message">It looks like you followed a broken link or entered an address that does not exist.</p>
+        <div class="host-error-details"><span>Request ID</span><strong>AC_01M8E7F4C91</strong><span>Path</span><strong>/portfolio/home</strong></div>
       </div>
       <div class="incident-actions">
-        <button class="btn btn-primary incident-continue" id="incidentContinue" type="button" hidden>Try again</button>
+        <button class="btn btn-primary incident-continue" id="incidentContinue" type="button">Try again</button>
       </div>
       <p class="incident-reveal" id="incidentReveal">It was a simulation. But the feeling of finding something broken is real, and that is exactly what I help prevent.</p>
     </div>
@@ -125,11 +122,12 @@
           <path d="M409 344l19 9M399 357l16 7M88 83l-13-9M79 96l-16-7" stroke="#FB7185" stroke-width="2" stroke-linecap="round" />
         </svg>
       </div>
-      <h1 class="hero-headline">Manual QA to find issues<br /><span class="line-2">before your users do.</span></h1>
-      <p class="hero-sub">I manually test websites, Android apps and APIs. You get clear test coverage, reproducible evidence and a report with prioritized findings. When it makes sense, I use AI to help create automated tests, then review the tests and check the results.</p>
+      <div class="hero-eyebrow"><span class="status-dot"></span> SENIOR QA · MANUAL AND EXPLORATORY TESTING</div>
+      <h1 class="hero-headline">Your product looks ready.<br /><span class="line-2">Until someone really tests it.</span></h1>
+      <p class="hero-sub">I find what can break in websites, Android apps, APIs and critical flows before your customer does. In up to 5 business days, you get reproducible evidence, prioritized findings and a clear path to fix them.</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Talk about a QA review</a>
-        <a href="#services" class="btn btn-outline">See how I can help</a>
+        <a href="#contact" class="btn btn-primary">Find the risks in my product</a>
+        <a href="#projects" class="btn btn-outline">See evidence and projects</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><span class="stat-num">5+</span><span class="stat-label">years in QA</span></div>

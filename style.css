@@ -99,6 +99,8 @@
 .login-field--error small { color: #fca5a5; font-size: .67rem; line-height: 1.35; }
 .login-fake-button { width: 100%; margin-top: 16px; padding: 11px; border: 0; border-radius: 7px; background: #334155; color: #94a3b8; font: 700 .8rem Inter, sans-serif; }
 .login-help { margin-top: 14px; color: #64748b; font-size: .7rem; }
+.host-error-details { display: grid; grid-template-columns: auto 1fr; gap: 7px 12px; margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(148,163,184,.16); color: #64748b; font: .64rem/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; text-align: left; }
+.host-error-details strong { color: #aeb8c8; font-weight: 500; text-align: right; }
 .incident-card h2 { margin: 0; color: #f8fafc; font-size: clamp(1.45rem, 4vw, 2rem); line-height: 1.12; letter-spacing: -.04em; }
 .incident-message { max-width: 410px; margin: 13px auto 19px; color: #aeb8c8; font-size: .9rem; line-height: 1.55; }
 .incident-actions { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 22px; }
@@ -1133,6 +1135,31 @@ ul { list-style: none; }
   .footer-links { flex-wrap: wrap; justify-content: center; }
 }
 
+/* Erro inicial propositalmente simples, como uma página de hospedagem indisponível. */
+.incident-demo { background: #050505; backdrop-filter: none; }
+.incident-card { width: min(100%, 560px); padding: 0; border: 0; border-radius: 3px; background: #fff; color: #243047; box-shadow: 0 18px 45px rgba(0,0,0,.38); text-align: left; animation: incident-card-alert .35s ease-out both; }
+.login-brand { justify-content: flex-start; margin: 0; padding: 22px 28px; border-bottom: 1px solid #e5e7eb; color: #172033; font-size: .92rem; }
+.login-brand-mark { background: #111827; }
+.incident-crash-banner { display: flex; align-items: center; gap: 16px; margin: 0; padding: 24px 28px; border: 0; border-bottom: 1px solid #e5e7eb; border-radius: 0; background: #fff; }
+.incident-crash-banner strong { color: #111827; font-size: 3.4rem; letter-spacing: -.1em; }
+.incident-crash-banner b { color: #172033; font-size: 1.1rem; }
+.incident-crash-banner span { color: #64748b; font-size: .78rem; }
+.login-window { margin: 0; padding: 24px 28px 26px; border: 0; border-radius: 0; background: #fff; box-shadow: none; }
+.login-window-top { display: none; }
+.incident-error-strip { margin-bottom: 20px; border-color: #fecaca; background: #fff1f2; color: #b91c1c; }
+.incident-error-mark { background: #dc2626; }
+.incident-icon { width: 40px; height: 40px; margin: 0 0 16px; border-color: #dc2626; color: #b91c1c; box-shadow: none; }
+.incident-kicker { color: #64748b; font-size: .68rem; }
+.incident-card h2 { color: #172033; font-size: clamp(1.5rem, 4vw, 2rem); }
+.incident-message { color: #526174; font-size: .92rem; }
+.host-error-details { border-color: #e5e7eb; color: #94a3b8; }
+.host-error-details strong { color: #526174; }
+.incident-actions { justify-content: flex-start; margin: 0; padding: 0 28px 28px; }
+.incident-continue { min-height: 44px; border-radius: 4px; background: #111827; color: #fff; box-shadow: none; }
+.incident-continue:hover { background: #374151; box-shadow: none; transform: none; }
+.incident-reveal { margin: 0 28px 28px; border-color: #cbd5e1; border-radius: 4px; background: #f8fafc; color: #334155; box-shadow: none; }
+.incident-demo--revealed .incident-card { border: 0; background: #fff; box-shadow: 0 18px 45px rgba(0,0,0,.38); }
+
 /* ============================================================
    DARK MINIMAL REDESIGN
    ============================================================ */
@@ -1176,6 +1203,8 @@ body { background: var(--bg); color: var(--text); }
 .hero-grid { opacity: .34; background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); }
 .hero-inner { max-width: 1180px; padding-top: 170px; }
 .hero-inner { position: relative; display: block; }
+.hero-eyebrow { position: relative; z-index: 1; margin-bottom: 22px; border-color: rgba(56,189,248,.24); background: rgba(56,189,248,.06); color: #a5e4fb; }
+.status-dot { background: #38bdf8; box-shadow: 0 0 0 3px rgba(56,189,248,.16), 0 0 12px rgba(56,189,248,.4); animation: none; }
 .hero-headline { position: relative; z-index: 1; max-width: 820px; font-size: clamp(3.6rem, 8vw, 7.3rem); font-weight: 500; letter-spacing: -.08em; line-height: .94; }
 .hero-headline, .hero-sub, .hero-ctas, .hero-stats, .hero-command { grid-column: 1; }
 .hero-sub, .hero-ctas, .hero-stats, .hero-command { position: relative; z-index: 1; }
@@ -1266,3 +1295,9 @@ body { background: var(--bg); color: var(--text); }
   .bug-tag--three { right: -2%; }
   .section { padding: 96px 0; }
 }
+
+/* Keep the simulated hosting error deliberately plain. */
+.incident-demo { background: #fff; }
+.incident-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 3px; color: #243047; box-shadow: 0 18px 45px rgba(15,23,42,.12); }
+.incident-continue { border-radius: 4px; background: #111827; color: #fff; box-shadow: none; }
+.incident-continue:hover { background: #374151; box-shadow: none; transform: none; }

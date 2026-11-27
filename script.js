@@ -30,22 +30,17 @@ const incidentMessage = document.getElementById('incidentMessage');
 const incidentReveal = document.getElementById('incidentReveal');
 
 if (incidentDemo) {
-  let incidentTimer;
-
   const finishIncident = () => {
-    clearTimeout(incidentTimer);
     incidentDemo.classList.add('incident-demo--revealed');
     const isEnglish = document.documentElement.lang === 'en';
     incidentTitle.textContent = isEnglish ? 'You are in.' : 'Agora você entrou.';
     incidentMessage.textContent = isEnglish ? 'The page recovered. No data was lost.' : 'A página se recuperou. Nenhum dado foi perdido.';
     incidentContinue.textContent = isEnglish ? 'Go to portfolio' : 'Ir para o site';
-    incidentContinue.hidden = false;
     incidentReveal.classList.add('is-visible');
     incidentContinue.focus();
   };
 
   const closeIncident = () => {
-    clearTimeout(incidentTimer);
     document.body.classList.remove('incident-open');
     incidentDemo.classList.add('is-closing');
     window.setTimeout(() => incidentDemo.remove(), 260);
@@ -53,8 +48,10 @@ if (incidentDemo) {
 
   incidentDemo.hidden = false;
   document.body.classList.add('incident-open');
-  incidentTimer = window.setTimeout(finishIncident, 4000);
-  incidentContinue.addEventListener('click', closeIncident);
+  incidentContinue.addEventListener('click', () => {
+    if (incidentDemo.classList.contains('incident-demo--revealed')) closeIncident();
+    else finishIncident();
+  });
   incidentDemo.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeIncident();
   });

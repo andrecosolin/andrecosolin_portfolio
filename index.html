@@ -40,24 +40,21 @@
     <div class="incident-card">
       <div class="login-brand"><span class="login-brand-mark">AC</span><span>André Cosolin</span></div>
       <div class="incident-crash-banner">
-        <strong>500</strong>
-        <div><b>Não foi possível carregar a página</b><span>O servidor encontrou um erro inesperado.</span></div>
+        <strong>404</strong>
+        <div><b>Site não encontrado</b><span>O endereço solicitado não existe neste momento. Tente novamente para ter certeza.</span></div>
       </div>
-      <div class="login-window" aria-live="polite">
+      <div class="login-window incident-host-error" aria-live="polite">
         <div class="login-window-top"><span></span><span></span><span></span></div>
-        <div class="incident-error-strip"><span class="incident-error-mark">!</span><span>ERR_AUTH_401 · FALHA AO AUTENTICAR</span></div>
+        <div class="incident-error-strip"><span class="incident-error-mark">!</span><span>PAGE_NOT_FOUND · DEPLOY_ERROR</span></div>
         <div class="incident-icon" aria-hidden="true">!</div>
-        <p class="incident-kicker">Área restrita</p>
-        <h2 id="incidentTitle">Não foi possível entrar</h2>
-        <p id="incidentMessage" class="incident-message">Sua sessão expirou e o login não foi concluído. Tente novamente.</p>
-        <div class="login-field"><span>E-mail</span><strong>fluxo_quebrado@éruim.com</strong></div>
-        <div class="login-field login-field--error"><span>Senha</span><strong>••••••••</strong><small>Credenciais inválidas ou sessão expirada</small></div>
-        <button class="login-fake-button" type="button" tabindex="-1">Entrar</button>
-        <p class="login-help">Esqueci minha senha</p>
+        <p class="incident-kicker">Deploy público</p>
+        <h2 id="incidentTitle">Esta página não existe</h2>
+        <p id="incidentMessage" class="incident-message">Parece que você seguiu um link quebrado ou digitou um endereço que não existe.</p>
+        <div class="host-error-details"><span>Request ID</span><strong>AC_01M8E7F4C91</strong><span>Path</span><strong>/portfolio/home</strong></div>
       </div>
 
       <div class="incident-actions">
-        <button class="btn btn-primary incident-continue" id="incidentContinue" type="button" hidden>Tentar novamente</button>
+        <button class="btn btn-primary incident-continue" id="incidentContinue" type="button">Tentar novamente</button>
       </div>
       <p class="incident-reveal" id="incidentReveal">Era uma simulação. Mas a sensação de encontrar algo quebrado é bem real e é justamente isso que eu ajudo a evitar.</p>
     </div>
@@ -139,20 +136,20 @@
           <path d="M409 344l19 9M399 357l16 7M88 83l-13-9M79 96l-16-7" stroke="#FB7185" stroke-width="2" stroke-linecap="round" />
         </svg>
       </div>
+      <div class="hero-eyebrow"><span class="status-dot"></span> QA SÊNIOR · TESTES MANUAIS E EXPLORATÓRIOS</div>
       <h1 class="hero-headline">
-        Encontre os riscos do seu produto<br />
-        <span class="line-2">antes que seus usuários encontrem.</span>
+        Seu produto parece pronto.<br />
+        <span class="line-2">Até alguém testar de verdade.</span>
       </h1>
 
       <p class="hero-sub">
-        Faço uma revisão de QA para startups, software houses e produtos digitais. Em até 5 dias úteis,
-        verifico até 3 fluxos e entrego evidências reproduzíveis, problemas priorizados e um relatório claro.
-        O escopo é combinado antes do início.
+        Eu encontro o que pode quebrar em sites, aplicativos Android, APIs e fluxos críticos antes do seu cliente.
+        Em até 5 dias úteis, você recebe evidências reproduzíveis, problemas priorizados e um caminho claro para corrigir.
       </p>
 
       <div class="hero-ctas">
-        <a href="#contato" class="btn btn-primary">Conversar sobre uma revisão de QA</a>
-        <a href="#servicos" class="btn btn-outline">Como posso ajudar</a>
+        <a href="#contato" class="btn btn-primary">Quero descobrir os riscos do meu produto</a>
+        <a href="#projetos" class="btn btn-outline">Ver evidências e projetos</a>
       </div>
 
       <div class="hero-stats">
