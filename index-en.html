@@ -29,6 +29,42 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- INCIDENT SIMULATION: a quick QA experience before the portfolio -->
+  <div class="incident-demo" id="incidentDemo" role="dialog" aria-modal="true" aria-labelledby="incidentTitle" aria-describedby="incidentMessage" hidden>
+    <div class="incident-card">
+      <div class="login-brand"><span class="login-brand-mark">AC</span><span>André Cosolin</span></div>
+      <div class="incident-crash-banner">
+        <strong>500</strong>
+        <div><b>We could not load this page</b><span>The server encountered an unexpected error.</span></div>
+      </div>
+      <div class="login-window" aria-live="polite">
+        <div class="login-window-top"><span></span><span></span><span></span></div>
+        <div class="incident-error-strip"><span class="incident-error-mark">!</span><span>ERR_AUTH_401 · AUTHENTICATION FAILED</span></div>
+        <div class="incident-icon" aria-hidden="true">!</div>
+        <p class="incident-kicker">Restricted area</p>
+        <h2 id="incidentTitle">Could not sign you in</h2>
+        <p id="incidentMessage" class="incident-message">Your session expired and the login was not completed. Please try again.</p>
+        <div class="login-field"><span>Email</span><strong>fluxo_quebrado@éruim.com</strong></div>
+        <div class="login-field login-field--error"><span>Password</span><strong>••••••••</strong><small>Invalid credentials or expired session</small></div>
+        <button class="login-fake-button" type="button" tabindex="-1">Sign in</button>
+        <p class="login-help">Forgot password?</p>
+      </div>
+      <div class="incident-actions">
+        <button class="btn btn-primary incident-continue" id="incidentContinue" type="button" hidden>Try again</button>
+      </div>
+      <p class="incident-reveal" id="incidentReveal">It was a simulation. But the feeling of finding something broken is real, and that is exactly what I help prevent.</p>
+    </div>
+  </div>
+  <div class="scroll-bug" id="scrollBug" aria-hidden="true">
+    <span class="scroll-bug-label">BUG_ON_THE_MOVE</span>
+    <svg viewBox="0 0 90 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M45 19v-8M38 13l-7-7M52 13l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      <ellipse cx="45" cy="37" rx="16" ry="21" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="2" />
+      <circle cx="39" cy="30" r="2.5" fill="currentColor" /><circle cx="51" cy="30" r="2.5" fill="currentColor" />
+      <path d="M29 29 15 21M28 39 10 39M30 49 16 58M61 29l14-8M62 39l18 0M60 49l14 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      <path class="scroll-bug-legs" d="M37 20v34M45 17v40M53 20v34" stroke="#FB7185" stroke-width="1.5" stroke-linecap="round" opacity=".8" />
+    </svg>
+  </div>
   <nav class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#hero" class="nav-logo">André Cosolin</a>
@@ -48,6 +84,47 @@
   <section class="hero" id="hero">
     <div class="hero-grid"></div>
     <div class="container hero-inner">
+      <div class="hero-break-visual" aria-hidden="true">
+        <span class="bug-tag bug-tag--one">BUG_500</span>
+        <span class="bug-tag bug-tag--two">AUTH_401</span>
+        <span class="bug-tag bug-tag--three">UI_021</span>
+        <span class="bug-tag bug-tag--four">API_422</span>
+        <svg viewBox="0 0 520 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="brokenPanelEn" x1="60" y1="50" x2="420" y2="360" gradientUnits="userSpaceOnUse"><stop stop-color="#38BDF8" stop-opacity=".2" /><stop offset="1" stop-color="#0F172A" stop-opacity=".05" /></linearGradient>
+            <filter id="softGlowEn" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8" /></filter>
+          </defs>
+          <path d="M418 54 490 28M433 76l62-3M427 101l47 24M86 374l-54 26M105 350l-70 8" stroke="#FB7185" stroke-width="2" stroke-linecap="round" opacity=".7" />
+          <circle cx="438" cy="57" r="18" fill="#FB7185" opacity=".13" filter="url(#softGlowEn)" />
+          <g opacity=".8">
+            <rect x="350" y="136" width="132" height="82" rx="12" fill="#0F172A" fill-opacity=".72" stroke="#38BDF8" stroke-opacity=".42" />
+            <text x="366" y="158" fill="#7DD3FC" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.5">QA FINDINGS</text>
+            <text x="366" y="190" fill="#E0F2FE" font-family="ui-monospace, monospace" font-size="25" font-weight="700">03</text>
+            <text x="402" y="190" fill="#94A3B8" font-family="ui-monospace, monospace" font-size="9">issues found</text>
+            <path d="M366 202h87" stroke="#38BDF8" stroke-opacity=".35" />
+          </g>
+          <g opacity=".76">
+            <rect x="18" y="222" width="136" height="96" rx="12" fill="#0F172A" fill-opacity=".72" stroke="#FB7185" stroke-opacity=".4" />
+            <text x="34" y="245" fill="#FDA4AF" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.5">FAILED CHECKS</text>
+            <circle cx="37" cy="267" r="4" fill="#FB7185" /><path d="M49 267h74" stroke="#FDA4AF" stroke-opacity=".55" />
+            <circle cx="37" cy="287" r="4" fill="#FB7185" /><path d="M49 287h57" stroke="#FDA4AF" stroke-opacity=".4" />
+            <circle cx="37" cy="307" r="4" fill="#38BDF8" /><path d="M49 307h83" stroke="#7DD3FC" stroke-opacity=".45" />
+          </g>
+          <path d="M350 176 314 186M154 260l-20 6" stroke="#FB7185" stroke-width="1.5" stroke-dasharray="4 6" opacity=".6" />
+          <g transform="rotate(-7 255 215)">
+            <rect x="54" y="48" width="374" height="286" rx="22" fill="url(#brokenPanelEn)" stroke="currentColor" stroke-width="2" />
+            <path d="M54 103h374" stroke="currentColor" stroke-width="2" />
+            <circle cx="82" cy="76" r="6" fill="#FB7185" /><circle cx="103" cy="76" r="6" fill="currentColor" opacity=".5" /><circle cx="124" cy="76" r="6" fill="currentColor" opacity=".25" />
+            <rect x="88" y="137" width="126" height="12" rx="6" fill="currentColor" opacity=".3" /><rect x="88" y="163" width="182" height="9" rx="4.5" fill="currentColor" opacity=".16" /><rect x="88" y="184" width="146" height="9" rx="4.5" fill="currentColor" opacity=".16" />
+            <rect x="88" y="227" width="112" height="31" rx="8" fill="#FB7185" opacity=".18" stroke="#FB7185" stroke-width="1.5" /><path d="M112 243h62" stroke="#FB7185" stroke-width="2" stroke-linecap="round" />
+            <path d="M287 139 267 195l31 12-24 73 70-96-34-11 27-54-50 20Z" fill="#FB7185" opacity=".16" /><path d="m287 139-20 56 31 12-24 73 70-96-34-11 27-54-50 20Z" stroke="#FB7185" stroke-width="2.5" stroke-linejoin="round" />
+            <path d="M247 111 228 150l24 11-15 41M250 202l-17 38 26 14" stroke="#FB7185" stroke-width="3" stroke-linecap="round" opacity=".85" />
+            <text x="293" y="306" fill="#FB7185" font-family="ui-monospace, monospace" font-size="16" font-weight="700" letter-spacing="3">BUG_500</text>
+          </g>
+          <path d="m393 329 27 12-17 24-30-10 20-26ZM76 100l-23-16 18-21 26 12-21 25Z" fill="currentColor" opacity=".7" />
+          <path d="M409 344l19 9M399 357l16 7M88 83l-13-9M79 96l-16-7" stroke="#FB7185" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </div>
       <h1 class="hero-headline">Manual QA to find issues<br /><span class="line-2">before your users do.</span></h1>
       <p class="hero-sub">I manually test websites, Android apps and APIs. You get clear test coverage, reproducible evidence and a report with prioritized findings. When it makes sense, I use AI to help create automated tests, then review the tests and check the results.</p>
       <div class="hero-ctas">
@@ -60,6 +137,18 @@
         <div class="stat"><span class="stat-num">35→76%</span><span class="stat-label">quality score in one quarter</span></div>
         <div class="stat-sep"></div>
         <div class="stat"><span class="stat-num">Senior</span><span class="stat-label">QA experience</span></div>
+      </div>
+      <div class="hero-command" aria-label="QA review summary">
+        <div class="hero-command-head"><span><i></i> QA REVIEW / LIVE</span><span>AC_001</span></div>
+        <div class="hero-command-body">
+          <div class="hero-signal"><span class="hero-signal-ring"></span><strong>Quality<br />in motion</strong></div>
+          <div class="hero-command-lines">
+            <div><span>critical flows</span><b>03</b></div>
+            <div><span>reproducible evidence</span><b>100%</b></div>
+            <div><span>risk before the user</span><b class="hero-command-accent">detected</b></div>
+          </div>
+        </div>
+        <div class="hero-command-foot"><span>MANUAL + EXPLORATORY + API</span><span class="hero-live-dot"></span></div>
       </div>
     </div>
   </section>
